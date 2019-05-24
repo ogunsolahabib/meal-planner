@@ -99,12 +99,16 @@ function showMeals() {
       console.log(error);
     });
 }
-
+document
+  .getElementById("search-field")
+  .addEventListener("click", function(event) {
+    event.stopPropagation();
+    document.querySelector(".top-container").style.display = "none";
+  });
+document.addEventListener("click", function() {
+  document.querySelector(".top-container").style.display = "block";
+});
 function mealSearch() {
-  document
-    .getElementById("meals")
-    .scrollIntoView({ block: "start", behavior: "smooth" });
-  document.querySelector(".top-container").style.display = "none";
   let string = document.querySelector("#search-field").value;
   let container = document.querySelector(".bottom-container");
   while (container.firstChild) {
