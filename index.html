@@ -1,155 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Restaurant app</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-container">
-        <div class="top-container-text">
-          <div class="text">
-            <p>
-              Frontend<br />
-              Training <br />Meal Planner App
-            </p>
-          </div>
-          <div>
-            <button class="top-container-button">Add Plan</button>
-          </div>
-        </div>
-      </div>
-      <div class="form-category">
-        <form id="form-fields" class="form">
-          <div>
-            <p>Add a new meal plan</p>
-          </div>
-          <div class="category">
-            <div>
-              <label class="Meal">Meal name</label>
-              <input id="meal-name" name="fname" type="text" value="" />
-            </div>
-            <div>
-              <label class="category-label"> Category </label>
-              <select id="category" class="select">
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch" selected>Lunch</option>
-                <option value="Dinner">Dinner</option>
-              </select>
-            </div>
-          </div>
-          <div class="one">
-            <label>Recipe Link</label>
-            <input id="recipe-link" type="text" />
-          </div>
-          <div class="two">
-            <label>When will you cook this meal?</label>
-            <input id="cook-when" inpuType="date" />
-          </div>
-          <div class="three">
-            <label>Add image link</label>
-            <input id="image-link" type="text" />
-          </div>
-          <div>
-            <button type="submit" class="form-button">
-              Create Plan
-            </button>
-          </div>
-        </form>
-      </div>
-      <div class="middle-container">
-        <input
-          id="search-field"
-          type="text"
-          placeholder="e.g Basmati Rice"
-          oninput="mealSearch()"
-        />
-        <button
-          id="search-btn"
-          class="middle-container-button"
-          onclick="mealSearch()"
-        >
-          Search meal
-        </button>
-      </div>
-      <div id="meals" class="bottom-container">
-        <div class="bottom-container-image">
-          <p>Lunch</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAjvo1mY2i3YaVaRYWJ3JXjZE4rvBMbzFfdSmbf0U8eBZRD1eJ"
-          />
-          <div>
-            <p class="food">Jollof Rice</p>
-            <a href="">view recipe</a>
-            <p>Monday - June 10, 2019</p>
-          </div>
-        </div>
-        <div class="bottom-container-image">
-          <p>Dinner</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40RwgyhtSmFUDVOAlF3mldrQBdPdMSv-AvhsFo1PJ6VwinI0k"
-          />
-          <div>
-            <p class="food">Egusi with Pounded Yam</p>
-            <a href="">view recipe</a>
-            <p>Tuesday - June 11, 2019</p>
-          </div>
-        </div>
-        <div class="bottom-container-image">
-          <p>Dinner</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHR8Y_IxAgIPDcDWHdth1bylAEYyOq4vc-YVvuXKq7I9B8tDAa"
-          />
-          <div>
-            <p class="food">Eba with Edikaikong Soup</p>
-            <a href="">view recipe</a>
-            <p>Wednesday - June 12, 2019</p>
-          </div>
-        </div>
-        <div class="bottom-container-image">
-          <p>Breakfast</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQJLeDHY-b0d5ViVH7BHxsMore0uqsKE9F3BT0xXBJ3sGXtjtL"
-          />
-          <div>
-            <p class="food">Moi-Moi</p>
-            <a href="">view recipe</a>
-            <p>Monday - June 10, 2019</p>
-          </div>
-        </div>
-        <div class="bottom-container-image">
-          <p>Lunch</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVRJLR_a5TOCMWYACmRBItLIx_uzB0imipEsCKrnVWmAEB-JGNQ"
-          />
-          <div>
-            <p class="food">Eba with Ogbono Soup</p>
-            <a href="">view recipe</a>
 
-            <p>Monday - June 10, 2019</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Restaurant app</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="/assets/css/bundled.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="top-container">
+      <div class="top-container-text">
+        <div class="text">
+          <p>
+            Frontend<br />
+            Training <br />Meal Planner App
+          </p>
         </div>
-        <div class="bottom-container-image">
-          <p>Dinner</p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwq8EbTgKpv1UBi3xdux5jwbdMvBktYoGFjzV6L9eKMWduX6f3Og"
-          />
-          <div>
-            <p class="food">Ewedu with Amala</p>
-            <a href>view recipe</a>
-            <p>Monday - June 10, 2019</p>
-          </div>
+        <div>
+          <button class="top-container-button">Add Plan</button>
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <div class="form-category">
+      <form id="form-fields" class="form">
+        <div>
+          <p>Add a new meal plan</p>
+        </div>
+        <div class="category">
+          <div>
+            <label class="Meal">Meal name</label>
+            <input id="meal-name" name="fname" type="text" value="" />
+          </div>
+          <div>
+            <label class="category-label"> Category </label>
+            <select id="category" class="select">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch" selected>Lunch</option>
+              <option value="Dinner">Dinner</option>
+            </select>
+          </div>
+        </div>
+        <div class="one">
+          <label>Recipe Link</label>
+          <input id="recipe-link" type="text" />
+        </div>
+        <div class="two">
+          <label>When will you cook this meal?</label>
+          <input id="cook-when" inpuType="date" />
+        </div>
+        <div class="three">
+          <label>Add image link</label>
+          <input id="image-link" type="text" />
+        </div>
+        <div>
+          <button type="submit" class="form-button">
+            Create Plan
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="middle-container">
+      <input id="search-field" type="text" placeholder="e.g Basmati Rice" oninput="mealSearch()" />
+      <button id="search-btn" class="middle-container-button" onclick="mealSearch()">
+        Search meal
+      </button>
+    </div>
+    <div id="meals" class="bottom-container">
+      <div class="bottom-container-image">
+        <p>Lunch</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAjvo1mY2i3YaVaRYWJ3JXjZE4rvBMbzFfdSmbf0U8eBZRD1eJ" />
+        <div>
+          <p class="food">Jollof Rice</p>
+          <a href="">view recipe</a>
+          <p>Monday - June 10, 2019</p>
+        </div>
+      </div>
+      <div class="bottom-container-image">
+        <p>Dinner</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40RwgyhtSmFUDVOAlF3mldrQBdPdMSv-AvhsFo1PJ6VwinI0k" />
+        <div>
+          <p class="food">Egusi with Pounded Yam</p>
+          <a href="">view recipe</a>
+          <p>Tuesday - June 11, 2019</p>
+        </div>
+      </div>
+      <div class="bottom-container-image">
+        <p>Dinner</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHR8Y_IxAgIPDcDWHdth1bylAEYyOq4vc-YVvuXKq7I9B8tDAa" />
+        <div>
+          <p class="food">Eba with Edikaikong Soup</p>
+          <a href="">view recipe</a>
+          <p>Wednesday - June 12, 2019</p>
+        </div>
+      </div>
+      <div class="bottom-container-image">
+        <p>Breakfast</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQJLeDHY-b0d5ViVH7BHxsMore0uqsKE9F3BT0xXBJ3sGXtjtL" />
+        <div>
+          <p class="food">Moi-Moi</p>
+          <a href="">view recipe</a>
+          <p>Monday - June 10, 2019</p>
+        </div>
+      </div>
+      <div class="bottom-container-image">
+        <p>Lunch</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVRJLR_a5TOCMWYACmRBItLIx_uzB0imipEsCKrnVWmAEB-JGNQ" />
+        <div>
+          <p class="food">Eba with Ogbono Soup</p>
+          <a href="">view recipe</a>
+
+          <p>Monday - June 10, 2019</p>
+        </div>
+      </div>
+      <div class="bottom-container-image">
+        <p>Dinner</p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwq8EbTgKpv1UBi3xdux5jwbdMvBktYoGFjzV6L9eKMWduX6f3Og" />
+        <div>
+          <p class="food">Ewedu with Amala</p>
+          <a href>view recipe</a>
+          <p>Monday - June 10, 2019</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="assets/js/bundled.js"></script>
+</body>
+
 </html>

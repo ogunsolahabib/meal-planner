@@ -1,0 +1,34 @@
+{
+  "name": "meal-planner",
+  "version": "1.0.0",
+  "description": "personal time-table for meals",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-cli": "^2.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "pluralize": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogunsolahabib/meal-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogunsolahabib/meal-planner/issues"
+  },
+  "homepage": "https://github.com/ogunsolahabib/meal-planner#readme",
+  "devDependencies": {
+    "browserify": "^16.3.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3"
+  }
+}
