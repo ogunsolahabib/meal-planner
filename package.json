@@ -25,7 +25,7 @@
   "homepage": "https://github.com/ogunsolahabib/meal-planner#readme",
   "devDependencies": {
     "browserify": "^16.3.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
